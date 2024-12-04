@@ -5,11 +5,10 @@
 package com.mycompany.holamundo;
 
 /**
- *
  * @author manana
  */
 public class DuplicateEncoder {
-    static String encode(String word){
+    static String encode(String word) {
         char letter;
         String outWord = "";
 
@@ -18,10 +17,16 @@ public class DuplicateEncoder {
             for (int j = i + 1; j < word.length(); j++) {
                 if (word.charAt(j) == letter) {
                     outWord += ")";
-                    continue;
+                    break;
                 }
-                outWord += "(";
+                for (int k = j - 1; k > 0; k--) {
+                    if (word.charAt(k) == letter) {
+                        outWord += ")";
+                        break;
+                    }
+                }
             }
+            if (i == outWord.length()) outWord += "(";
         }
         return outWord;
     }
