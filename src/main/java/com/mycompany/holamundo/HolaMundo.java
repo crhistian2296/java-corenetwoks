@@ -38,7 +38,7 @@ public class HolaMundo {
         showComer(fox);
     }
 
-//  Polimorfismo
+//  Polymorphism
 //  all animals and its subclasses have the eat() method
     public static void showComer(Animal animal) {
         animal.eat();
