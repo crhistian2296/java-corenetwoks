@@ -7,4 +7,17 @@ public class Bird extends Animal {
         super(name, race, weight, height, isMithic);
         this.doFly = doFly;
     }
+
+    public boolean isDoFly() {
+        return doFly;
+    }
+
+    public void setDoFly(boolean doFly) {
+        this.doFly = doFly;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nEs un pajaro";
+    }
 }

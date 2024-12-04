@@ -1,7 +1,6 @@
 package com.mycompany.holamundo;
 
-import com.mycompany.models.Animal;
-import com.mycompany.models.Bird;
+import com.mycompany.models.*;
 
 public class HolaMundo {
     public HolaMundo() {};
@@ -14,16 +13,22 @@ public class HolaMundo {
 //                .concat("o")
 //                .toUpperCase()
 //                .contains("MAN");
-        if (args.length > 0) {
-            System.out.println(args[0]);
-            System.out.println(args[1]);
+        for (String arg : args) {
+            System.out.println(arg);
         }
-        Animal horse = new Animal("spirit", "percheron", 400, 1.77, false);
-        System.out.println(horse.getName());
-        horse.setName("Rocinante");
-        System.out.println(horse.getName());
 
+//        Animals
         Bird dove = new Bird("Patri","Tortch", 1, 1, false, true);
+        Amphibian triton = new Amphibian("Torsky", "Axolotl", 1, 1, false, "violet");
+        Fish nemo = new Fish("Nemo", "clownfish", 1, 1, false, 2);
+        Mamal morso = new Mamal("Morso", "Arctic walrus", 1, 1, false, 4);
+        Reptile django = new Reptile("Django", "Chameleon", 1, 1, false, true);
+
+//        Prnting animals
         System.out.println(dove);
+        System.out.println(triton);
+        System.out.println(nemo);
+        System.out.println(morso);
+        System.out.println(django);
     }
 }
