@@ -65,6 +65,10 @@ public class Animal {
         return isMithic;
     }
 
+    public String eat() {
+        return "I ate";
+    }
+
     @Override
     public String toString() {
         return "Name: " + name + ", Race: " + race + ", Weight: " + weight + ", Height: " + height;
